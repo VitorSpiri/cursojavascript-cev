@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body{
+            font-size: 16pt;
+            background-color: rgb(127, 172, 255);
+            color: rgb(85, 76, 76);
+            font-family: Verdana;
+        }
+        h1{
+            color: rgb(0, 226, 151);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Olá Mundo :D</h1>
+    <p>Espero ter me livrado da maldição</p>
+
+    <script>
+        
+        //Criando variáveis para receber as informações
+
+       var n1 = Number( prompt('Digite um número: '))
+       var n2 = Number( prompt('Digite mais um número: '))
+
+       var s = n1 + n2
+
+       alert('A soma dos valores é: ' + s)
+
+       //Podemos também, transformar a variável 's' em String no final, utilizando o:
+
+       alert('A soma dos valores é: ' + String(s))
+
+       //Utilizando o Template String e o placeholder, ficará:
+
+       alert(`A soma entre ${n1} e ${n2} é igual a ${s}` )
+       
+    </script>
+
+</body>
+</html>
