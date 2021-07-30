@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(159, 227, 248)
+            ;
+            font-family: Verdana;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JS</p>
+
+    <div id="msg">Clique me mim</div>
+
+    <div name="msg2">Clique em mim 2</div>
+
+    <script>
+
+        //Podemos selecionar o 1º parágrafo, utilizando depois do parênteses o [0]:
+
+        var p1 = document.getElementsByTagName('p')[0]
+
+        document.write('Está escrito : ' + p1.innerHTML) //OBS: utilizamos o innerHTML porque ele seleciona toda a informação e formatação do dado selecionado, podemos utilizar também o innerText, porém só será obtido a informação, sem  a formatação  
+
+
+        //Podemos também, modificar a cor do texto, alterando o style color da tag:
+
+        p1.style.color = 'blue'
+
+        //Podemos também, modificar o estilo do fundo com: 
+
+        var corpo = document.body //OBS: essa variável deveria ter sido criada antes, mas por praticidade do aprendizado foi colocada depois
+
+        corpo.style.background = 'gray'
+
+        //Podemos também, selecionar por ID, logo, iremos interagir com a div "Clique Aqui", atribuindo a ela, uma id = "msg"
+
+        var d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerHTML = 'Estou aguardando'
+
+        //Iremos fazer o mesmo, mas com o name:
+
+        var e = document.getElementsByName('msg2')[0]
+        e.innerHTML = 'Olá'
+        e.style.background = 'lightblue'
+
+        //Podemos também, selecionar por Seletor, no lugar do getElement:
+
+        var f = document.querySelector('div#msg') //OBS: quando queremos selecionar um id: utilizamos # e para classe: .
+        
+        f.style.color = 'purple'
+        
+    </script>
+</body>
+</html>
