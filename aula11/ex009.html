@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Verificação de Nacionalidade Brasileira</h1>
+
+    <label for="txtp">Digite o país em que você nasceu: </label>
+    <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="verif()">
+
+    <p id="res"></p>
+
+    <script>
+        function verif(){
+            var p = document.getElementById('txtp').value
+
+
+            var res = document.getElementById('res')
+
+            if(p != 'Brasileiro'){
+                res.innerHTML = 'Você é <strong>estrangeiro</strong>'
+            }else{
+                res.innerHTML = 'Você é <strong>brasileiro</strong>'
+            }
+
+
+        }
+    </script>
+</body>
+</html>
