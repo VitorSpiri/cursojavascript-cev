@@ -8,6 +8,7 @@ function contar(){
 
     if (inicio.value == 0 || fim.value == 0 || passo.value == 0){
 
+        res.innerHTML = 'Impossível contar'
         alert('Está faltando dados')
 
     } else{
@@ -18,12 +19,29 @@ function contar(){
         let f = Number(fim.value)
         let p = Number(passo.value)
 
-        for (let c = i; c <= f; c += p){
+        if(p <= 0){
+          alert('Passo inválido! Considerando passo 1')
 
-            res.innerHTML += ` ${c} &#128073;`
+          p = 1
+        }
+        if(i < f){
+            //Contagem Crescente
+            for (let c = i; c <= f; c += p){
+
+                res.innerHTML += ` ${c} &#128073;`
+            }
+            
+        }else{
+            //Contagem Decrescente
+            for (let c = i; c >= f; c-= p){
+
+                res.innerHTML += ` ${c} &#128073`
+            }
         }
 
         res.innerHTML += ' &#127937;'
+
+
 
     }
 
