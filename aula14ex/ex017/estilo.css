@@ -1,11 +1,11 @@
 body{
     background: rgb(137, 188, 255);
     font: normal 18pt Verdana;
-    text-align: center;
 }
 
 header{
     color: white;
+    text-align: center;
 }
 
 section{
@@ -17,7 +17,13 @@ section{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.329);
 }
 
+input{
+    padding: 8px;
+    margin: 8px;
+}
+
 footer{
     color: white;
     font-style: italic;
+    text-align: center;
 }
